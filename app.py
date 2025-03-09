@@ -77,9 +77,9 @@ sort_nums = [3, 4, 5, 6, 2, 3, 4, 1, 9, 10]
 print(sorted(sort_nums, reverse=True))
 
 items = [
+    ("Product3", 12),
     ("Product1", 10),
     ("Product2", 9),
-    ("Product3", 12),
 ]
 
 items.sort(key=lambda item: item[1])
@@ -88,3 +88,19 @@ print(items)
 # map function
 prices = list(map(lambda item: item[1], items))
 print(prices)
+x = map(lambda item: item[1] >= 10, items)
+print(list(x))
+
+# filter function
+filtered = list(filter(lambda item: item[1] >= 10, items))
+print(filtered)
+
+# list comprehension
+# [expression for item in items]
+new_prices = [item[1] for item in items]
+print(new_prices)
+
+# filter using list comprehension
+# [expression for item in items if condition]
+filtered_prices = [item for item in items if item[1] >= 10]
+print(filtered_prices)
