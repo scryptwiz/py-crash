@@ -69,3 +69,22 @@ for index, letter in enumerate(letters):
 letters_dict = {"name": "kelvin", "age": 22}
 for key, value in letters_dict.items():
     print(key, value)
+
+# Sort list
+sort_nums = [3, 4, 5, 6, 2, 3, 4, 1, 9, 10]
+# sort_nums.sort()
+# print(sort_nums)
+print(sorted(sort_nums, reverse=True))
+
+items = [
+    ("Product1", 10),
+    ("Product2", 9),
+    ("Product3", 12),
+]
+
+items.sort(key=lambda item: item[1])
+print(items)
+
+# map function
+prices = list(map(lambda item: item[1], items))
+print(prices)
