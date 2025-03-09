@@ -104,3 +104,10 @@ print(new_prices)
 # [expression for item in items if condition]
 filtered_prices = [item for item in items if item[1] >= 10]
 print(filtered_prices)
+
+
+# zip function: Combime two or more lists
+list1 = [1, 2, 3]
+list2 = [10, 20, 30]
+
+print(list(zip(list1, list2)))
